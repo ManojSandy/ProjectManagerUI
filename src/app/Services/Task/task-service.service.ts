@@ -24,32 +24,32 @@ export class TaskServiceService {
   GetTask(id : number) : Observable<Task>
   {
     console.log(id);
-      return this._http.get("http://localhost:53815/api/GetTask" +"/"+ id)
+      return this._http.get("http://localhost/ProjectManagerServiceWebApi/api/GetTask" +"/"+ id)
       .map((response : Response)=><Task> response.json());
   }
 
   GetAllTasks() : Observable<Task[]>
   {
-      return this._http.get("http://localhost:53815/api/GetAllTasks")
+      return this._http.get("http://localhost/ProjectManagerServiceWebApi/api/GetAllTasks")
       .map((response : Response)=><Task[]> response.json());
   }
 
   InsertData(task : Task) : Observable<string>
   {
     console.log('Insertinggg...');
-     return this._http.post("http://localhost:53815/api/AddTask",task)
+     return this._http.post("http://localhost/ProjectManagerServiceWebApi/api/AddTask",task)
      .map((response : Response)=><string> response.json());
   }
 
   UpdateData(_task : Task) : Observable<string>
   {
-    return this._http.put("http://localhost:53815/api/UpdateTask" ,_task)
+    return this._http.put("http://localhost/ProjectManagerServiceWebApi/api/UpdateTask" ,_task)
     .map((response : Response)=> <string> response.json());
   }
 
   DeleteData(_taskID : number) : Observable<string>
   {
-    return this._http.delete("http://localhost:53815/api/DeleteTask" +"/" + _taskID )
+    return this._http.delete("http://localhost/ProjectManagerServiceWebApi/api/DeleteTask" +"/" + _taskID )
     .map((response : Response)=> <string> response.json());
   }
 
@@ -58,38 +58,38 @@ export class TaskServiceService {
   GetProject(id : number) : Observable<Project>
   {
     console.log('GETPRO'+id);
-      return this._http.get("http://localhost:53815/api/GetProject" +"/"+ id)
+      return this._http.get("http://localhost/ProjectManagerServiceWebApi/api/GetProject" +"/"+ id)
       .map((response : Response)=><Project> response.json());
   }
   
   GetSummaryProjects() : Observable<ProjectSummary[]>
   {
-      return this._http.get("http://localhost:53815/api/GetProjectSummary")
+      return this._http.get("http://localhost/ProjectManagerServiceWebApi/api/GetProjectSummary")
       .map((response : Response)=><ProjectSummary[]> response.json());
   }
 
   GetAllProjects() : Observable<Project[]>
   {
-      return this._http.get("http://localhost:53815/api/GetAllProjects")
+      return this._http.get("http://localhost/ProjectManagerServiceWebApi/api/GetAllProjects")
       .map((response : Response)=><Project[]> response.json());
   }
 
   InsertProject(task : Project) : Observable<string>
   {
     console.log('IN');
-     return this._http.post("http://localhost:53815/api/AddProject",task)
+     return this._http.post("http://localhost/ProjectManagerServiceWebApi/api/AddProject",task)
      .map((response : Response)=><string> response.json());
   }
 
   UpdateProject(_task : Project) : Observable<string>
   {
-    return this._http.put("http://localhost:53815/api/UpdateProject" ,_task)
+    return this._http.put("http://localhost/ProjectManagerServiceWebApi/api/UpdateProject" ,_task)
     .map((response : Response)=> <string> response.json());
   }
 
   DeleteProject(_taskID : number) : Observable<string>
   {
-    return this._http.delete("http://localhost:53815/api/DeleteProject" +"/" + _taskID )
+    return this._http.delete("http://localhost/ProjectManagerServiceWebApi/api/DeleteProject" +"/" + _taskID )
     .map((response : Response)=> <string> response.json());
   }
 
@@ -97,38 +97,38 @@ export class TaskServiceService {
 GetUser(id : number) : Observable<User>
 {
   console.log(id);
-    return this._http.get("http://localhost:53815/api/GetUser" +"/"+ id)
+    return this._http.get("http://localhost/ProjectManagerServiceWebApi/api/GetUser" +"/"+ id)
     .map((response : Response)=><User> response.json());
 }
 
 GetSummaryUsers() : Observable<User[]>
   {
-      return this._http.get("http://localhost:53815/api/GetUserSummary")
+      return this._http.get("http://localhost/ProjectManagerServiceWebApi/api/GetUserSummary")
       .map((response : Response)=><User[]> response.json());
   }
 
 GetAllUsers() : Observable<User[]>
 {
   console.log('User list');
-    return this._http.get("http://localhost:53815/api/GetAllUsers")
+    return this._http.get("http://localhost/ProjectManagerServiceWebApi/api/GetAllUsers")
     .map((response : Response)=><User[]> response.json());
 }
 
 InsertUser(task : User) : Observable<string>
 {
-   return this._http.post("http://localhost:53815/api/AddUser",task)
+   return this._http.post("http://localhost/ProjectManagerServiceWebApi/api/AddUser",task)
    .map((response : Response)=><string> response.json());
 }
 
 UpdateUser(_task : User) : Observable<string>
 {
-  return this._http.put("http://localhost:53815/api/UpdateUser" ,_task)
+  return this._http.put("http://localhost/ProjectManagerServiceWebApi/api/UpdateUser" ,_task)
   .map((response : Response)=> <string> response.json());
 }
 
 DeleteUser(_taskID : number) : Observable<string>
 {
-  return this._http.delete("http://localhost:53815/api/DeleteUser" +"/" + _taskID )
+  return this._http.delete("http://localhost/ProjectManagerServiceWebApi/api/DeleteUser" +"/" + _taskID )
   .map((response : Response)=> <string> response.json());
 }
 

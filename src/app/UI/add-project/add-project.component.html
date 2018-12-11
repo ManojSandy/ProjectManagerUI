@@ -12,12 +12,12 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="checkbox" id="chkDate" [(ngModel)]="item.isChecked" name="chkDate"> &nbsp;
+                    <input type="checkbox" id="chkDate" [(ngModel)]="item.IsChecked" name="chkDate"> &nbsp;
                     <label>Set Start Date and End Date</label> &nbsp;
-                    <input  type="datetime-local" id="txtStartDate"  [(ngModel)]="item.StartDate" [disabled]="!item.isChecked" 
+                    <input  type="datetime-local" id="txtStartDate"  [(ngModel)]="item.StartDate" [disabled]="!item.IsChecked" 
                             name="StartDate"
                             placeholder="Start Date" style="width:150px"> &nbsp;
-                    <input type="datetime-local" id="txtEndDate" [(ngModel)]="item.EndDate" [disabled]="!item.isChecked" name="EndDate"
+                    <input type="datetime-local" id="txtEndDate" [(ngModel)]="item.EndDate" [disabled]="!item.IsChecked" name="EndDate"
                         placeholder="End Date" style="width:150px">
                 </td>
             </tr>
